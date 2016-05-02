@@ -54,6 +54,14 @@ thinkplot.config(xlabel='Frequency (1/days)',
 """
 
 """  4-5 & 4-6
+import pandas as pd
+import numpy as np
+import thinkdsp
+import thinkplot
+df = pd.read_csv('123.csv',nrows=2112,parse_dates=[0])
+ys = df.Close.values
+ts = np.arange(len(ys))
+
 duration=len(ys)
 framerate = 20
 linewidth = 1
